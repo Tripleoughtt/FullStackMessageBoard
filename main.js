@@ -18,6 +18,8 @@ app.use(morgan('dev'));
 app.use(bodyParser.urlencoded( {extended: true} ));
 app.use(bodyParser.json());
 app.use(express.static('public'));
+app.use('/bower_components',  express.static(__dirname + '/bower_components'));
+
 
 // These are my routes
 app.use('/', require('./routes/messages'))
