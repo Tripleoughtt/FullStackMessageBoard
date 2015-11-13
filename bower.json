@@ -1,0 +1,21 @@
+{
+  "name": "messageboard",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "moment": "~2.10.6",
+    "font-awesome": "fontawesome#~4.4.0",
+    "bootswatch": "~3.3.5"
+  }
+}

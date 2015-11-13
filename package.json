@@ -1,0 +1,23 @@
+{
+  "name": "messageboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "node main.js",
+    "postinstall": "bower i && npm i"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "bower": "^1.6.5",
+    "dotenv": "^1.2.0",
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "jquery": "^2.1.4",
+    "mongoose": "^4.2.5",
+    "morgan": "^1.6.1"
+  }
+}

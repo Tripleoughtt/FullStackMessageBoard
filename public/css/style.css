@@ -1,0 +1,39 @@
+#template{
+  display: none;
+}
+
+.message {
+  border: 2px solid #000;
+  border-radius: 8px;
+  margin-top : 20px;
+  margin-bottom: 20px;
+  background-color: #3b00ff;
+  color: #ffffff;
+}
+
+h1,h2,h3,h4{
+  color: #b7b7b7;
+}
+
+i {
+  margin-left: 20px;
+}
+
+input {
+  vertical-align: top;
+}
+
+.name{
+  vertical-align: top;
+  /*background-color: #d3d3d3;*/
+  margin: none;
+
+}
+
+.text {
+  font-size: 26px;
+}
+
+body {
+    /*background-color: #d6d6d6;*/
+}

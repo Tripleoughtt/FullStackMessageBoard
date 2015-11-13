@@ -1,0 +1,62 @@
+doctype html
+html(lang="en")
+  head
+    title Home
+    link(rel="stylesheet" href="bower_components/bootswatch/cyborg/bootstrap.min.css" media="all")
+    link(rel="stylesheet", href="bower_components/font-awesome/css/font-awesome.min.css", media="all")
+    link(href="css/style.css" rel="stylesheet")
+  body
+    .container
+      .row.header
+        h1 Welcome to my Fullstack Message Board!
+        h2 Here you can post whatever you want, after you assign an author name you can click the pencil next to it to start writing! So yeah! Have fun!
+
+      .row#messageCreate
+        input#author(type="text", placeholder="Your Name Here!", name="")
+        a#writeMessage(href='#', data-target='#messageModal', data-toggle='modal')
+          i.fa.fa-pencil-square-o.fa-2x
+
+      .row.messages 
+        each message in messages 
+          .message
+            h1.name= message.name
+              a.editMessage(href='#', data-target='#editModal', data-toggle='modal')
+                i.fa.fa-pencil-square-o.fa-lg
+              i.fa.fa-trash.fa-lg.delete
+            div.text= message.messageText
+            h2.time= message.timeCreated
+        #template.message
+          h1.name Name Goes here
+          div.text text is going to go here
+          h2.time This will be the date and time something was created
+
+    #messageModal.modal.fade(role='dialog')
+      .modal-dialog.modal-lg
+        // Modal content
+        .modal-content
+          .modal-header
+            h1#authorName
+          .modal-body
+            textarea#newMessage(name="", cols="80", rows="25")
+            p.msg(align='center')
+            br
+            button.btn.btn-primary.btn-lg.center-block.submit(type='button', data-dismiss='modal') Save
+            br
+            br
+    #editModal.modal.fade(role='dialog')
+      .modal-dialog.modal-lg
+        // Modal content
+        .modal-content
+          .modal-header
+            h1 Insert Edits into the textbox below and Save them!
+          .modal-body
+            textarea#editMessage(name="", cols="80", rows="25")
+            p.msg(align='center')
+            br
+            button.btn.btn-primary.btn-lg.center-block#submit(type='button', data-dismiss='modal') Save
+            br
+            br
+    script(src='bower_components/jquery/dist/jquery.min.js')
+    script(src="bower_components/bootstrap/dist/js/bootstrap.min.js")
+    script(src="bower_components/moment/min/moment.min.js")
+    script(src='js/messageFunctions.js')
